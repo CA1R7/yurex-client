@@ -7,7 +7,7 @@ const mainPath = path.join(__dirname, "./src");
 // Public folder which it means a static folder.
 const publicPath = path.join(__dirname, "./public/assets");
 // Build folder which it contains production files.
-const buildPath = path.join(__dirname, "../app/wbuild");
+const buildPath = path.join(__dirname, "./build");
 
 console.log("MODE_CLIENT: " + process.env.mode);
 
