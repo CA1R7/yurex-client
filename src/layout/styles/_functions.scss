@@ -1,0 +1,100 @@
+@mixin gradientText {
+  @include gradientBg();
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin blurBg($blur) {
+  -webkit-backdrop-filter: saturate(180%) blur($blur);
+  backdrop-filter: saturate(180%) blur($blur);
+}
+
+@mixin loaderCircle($width, $height, $color) {
+  display: block !important;
+  width: $width;
+  height: $height;
+  position: unset;
+  transform: unset;
+  text-indent: -9999em;
+  border-radius: 50px;
+  border-left: 2px solid $color;
+  animation: looper 0.2s infinite linear;
+}
+
+@mixin cardAnimate($clr) {
+  animation: cardshadow 3s linear infinite;
+  @keyframes cardshadow {
+    from {
+      box-shadow: 0 0 10px $clr;
+    }
+    to {
+      box-shadow: 0 0 20px $clr;
+    }
+  }
+}
+
+@mixin gradientBg {
+  background: linear-gradient(40deg, #6139e6, #393ce6);
+  background: -webkit-linear-gradient(40deg, #6139e6, #393ce6);
+}
+
+@keyframes looper {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin rainbow_animation() {
+  animation: rainbow_animation_keyframes 15s infinite;
+  @keyframes rainbow_animation_keyframes {
+    100%,
+    0% {
+      color: #ff4242;
+    }
+
+    8% {
+      color: #ffa74f;
+    }
+
+    16% {
+      color: #ffff67;
+    }
+
+    25% {
+      color: #a3ff48;
+    }
+
+    33% {
+      color: #46ff46;
+    }
+
+    41% {
+      color: #50fda6;
+    }
+
+    50% {
+      color: #55fcfc;
+    }
+
+    58% {
+      color: #4aa3fc;
+    }
+
+    66% {
+      color: #4242ff;
+    }
+
+    75% {
+      color: #a54dfd;
+    }
+
+    83% {
+      color: #ff4dff;
+    }
+
+    91% {
+      color: #ff4ba5;
+    }
+  }
+}
