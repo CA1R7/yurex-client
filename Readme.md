@@ -1,6 +1,6 @@
 <p align="center">
   <img src="./src/layout/img/logo-text.png" width="400px">
-  <p align="center">An advanced agario game with greatest features</p>
+  <p align="center">This's a agario survival game with new features built with reactjs, I'm using MultiOgar servers with some small changes e.g. (xp, level, ...)</p>
 </p>
 
 # Usage
